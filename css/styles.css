@@ -24,7 +24,14 @@
 img {
   display: block;
 }
+.container {
+  max-width: 1128px;
+  max-width: 100%;
+  margin: 0 auto;
+}
 body {
+  font-size: 16px;
+  margin: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -35,20 +42,40 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+button {
+  all: unset; /* Сбрасывает ВСЕ стандартные стили */
+  display: inline-block; /* Чтобы можно было задавать размеры */
+  cursor: pointer; /* Указатель при наведении */
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 
 h1 {
+  font-size: 56px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
   line-height: 1;
 }
 h2 {
+  font-size: 36px;
   font-weight: 700;
   color: #2e2f42;
   line-height: 1.1;
   text-align: center;
 }
 h3 {
+  font-size: 20px;
   font-weight: 500;
   color: #2e2f42;
   line-height: 1.2;
@@ -80,44 +107,158 @@ a {
 .nav li a:focus {
   color: #404bbf;
 }
-.contacts a {
+.contact-links a {
   text-decoration: none;
   line-height: 1.5;
   color: #434455;
 }
-.contacts a:hover {
+.contact-links a:hover {
   color: #404bbf;
 }
-.contacts a:focus {
+.contact-links a:focus {
   color: #404bbf;
+}
+.header-positioning {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  display: block;
+  padding: 24px 0;
+}
+.nav-link {
+  display: block;
+  padding: 24px 0;
+}
+.contact-links {
+  display: flex;
+  gap: 40px;
+}
+.nav {
+  display: flex;
+  gap: 76px;
+}
+.header-links {
+  display: flex;
+  gap: 40px;
 }
 .header {
   background-color: #e7e9fc;
 }
 .hero {
+  display: flex;
   background-color: #2e2f42;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 .button {
   background-color: #4d5ae5;
   color: #ffffff;
   font-weight: 500;
   padding: 16px 32px;
+  min-width: 105px;
+  text-align: center;
   letter-spacing: 0.04em;
+  display: flex;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 .button:hover {
   background-color: #404bbf;
 }
+
 .button:focus {
   background-color: #404bbf;
 }
-footer {
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 0;
+}
+.feature-list {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+.feature-list-item {
+  width: 264px;
+}
+.team {
+  background-color: #f4f4fd;
+  padding: 120px 0;
+}
+.team-title {
+  margin-bottom: 72px;
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  text-align: center;
+  justify-content: center;
+}
+.team-info {
+  background-color: #ffffff;
+  padding: 32px 16px;
+  max-width: 264px;
+}
+.team-role {
+  margin-top: 8px;
+}
+.portfolio {
+  padding: 120px 0;
+}
+.portfolio-title {
+  margin-bottom: 72px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 48px;
+  gap: 24px; /* Вместо margin-right */
+  justify-content: space-between;
+}
+.portfolio-card {
+  box-sizing: border-box;
+  border: 1px solid #e7e9fc;
+  max-width: 360px;
+}
+.portfolio-card:nth-child(3n) {
+  margin-right: 0;
+}
+.portfolio-info {
+  max-width: 360px;
+}
+.footer {
   background-color: #2e2f42;
   color: #f4f4fd;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0;
+}
+.footer-info {
+  max-width: 264px;
 }
 .footer-logo {
   color: #f4f4fd;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+}
+.footer-text {
+  margin-top: 16px;
 }
 .accent-footer {
   color: #4d5ae5;
